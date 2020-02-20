@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import NASA from '/assets/NASA.jpg';
 const Header = (props) => {
     const [collapsed, setCollapsed] = useState(true);
   
@@ -10,7 +10,7 @@ const Header = (props) => {
     return (
       <div>
         <Navbar color="faded" light>
-          <NavbarBrand href="https://www.nasa.gov/" className="mr-auto"> <img src='C:\Users\bbjbe\Desktop\Lambda\nasa-photo-of-the-day\assets\NASA_Logo_Plaque.jpg' alt='NASA logo'/> NASA Photo Of The Day</NavbarBrand>
+          <NavbarBrand href="https://www.nasa.gov/" className="mr-auto"> <img src={NASA} alt='NASA log0'/> NASA Photo Of The Day</NavbarBrand>
           <NavbarToggler onClick={toggleNavbar} className="mr-2" />
           <Collapse isOpen={!collapsed} navbar>
             <Nav navbar>
