@@ -5,16 +5,25 @@ import {
   } from 'reactstrap';
   import 'bootstrap/dist/css/bootstrap.min.css';
   import styled from 'styled-components';
+  import BGI from '/assets/BGI.jpg';
 
 const CBody = styled(CardBody)`
 border: black 1px solid;
 
 `;
+const CardCont = styled(Card)`
+width: 70%;
+margin: 0 auto;
+`
+const BG = styled.div`
+background:{BGI};
+
+`
 const Image_box = (props) =>{
     
     return(
         <div>
-             <Card>
+             <CardCont>
         <CardImg top width="100%" src={props.img} alt="Outerspace" />
         <CBody >
           <CardTitle>Title: {props.title}</CardTitle>
@@ -22,7 +31,7 @@ const Image_box = (props) =>{
           <CardText>Description: {props.explanation}</CardText>
           <Button>Button</Button>
         </CBody>
-      </Card>
+      </CardCont>
         </div>
     )
     
